@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "812151ef-95da-439f-a0f4-693066e6a8bd",
+		"name": "pqr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create PQR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"williams\",\r\n    \"text\": \"asfdasfasfa\",\r\n    \"type\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/pqr/",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"pqr",
+						""
+					]
+				},
+				"description": "Creacion de petición queja o reclamo"
+			},
+			"response": []
+		},
+		{
+			"name": "Get PQR ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/pqr/60304b67b01edc700d2ec0ba",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"pqr",
+						"60304b67b01edc700d2ec0ba"
+					]
+				},
+				"description": "Get PQR por el id del mismo"
+			},
+			"response": []
+		},
+		{
+			"name": "Get PQR Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/pqr/by-username/williams",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"pqr",
+						"by-username",
+						"williams"
+					]
+				},
+				"description": "Get PQR por el nombre de usuario username"
+			},
+			"response": []
+		},
+		{
+			"name": "Get PQRS OPEN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/pqr/open",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"pqr",
+						"open"
+					]
+				},
+				"description": "Get PQRS Abiertos sin respuesta "
+			},
+			"response": []
+		},
+		{
+			"name": "Update PQR",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"60304b67b01edc700d2ec0ba\",\r\n    \"username\": \"williams\",\r\n    \"createAt\": \"2021-02-19T23:36:07.160+00:00\",\r\n    \"text\": \"asfdasfasfa\",\r\n    \"typePqr\": {\r\n        \"id\": 3,\r\n        \"name\": \"Reclamo\"\r\n    },\r\n    \"relatedId\": \"603049554137df0ea0c7e4a9\",\r\n    \"reply\": \"Ingresado por rest\",\r\n    \"updateAt\": \"2021-02-19T23:36:07.160+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/pqr/",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"pqr",
+						""
+					]
+				},
+				"description": "Actualizar respuesta PQR"
+			},
+			"response": []
+		}
+	]
+}

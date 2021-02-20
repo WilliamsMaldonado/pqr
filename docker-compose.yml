@@ -1,0 +1,15 @@
+version: "3"
+services:
+  api-database:
+    image: mongo:latest
+    container_name: "api-database"
+    ports:
+      - 27017:27017
+  api:
+    build: ./
+    depends_on:
+      - api-database
+    ports:
+      - 9091:8080
+    links:
+      - api-database
