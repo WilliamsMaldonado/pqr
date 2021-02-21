@@ -30,25 +30,25 @@
 > 
 >> JSON POSTMAN
 >
-> ####pqr.postman_collection.json
+> pqr.postman_collection.json
 
-#Prerequisitos
+# Prerequisitos
 
 * [Git](http://git-scm.com/)
 * [Maven](https://maven.apache.org/)
 
-#Test
+# Test
 
 * [Junit](https://junit.org/junit4/)
 
 > mvn test
->
+>>target/site/jacoco/index.html
 
-#Build
+# Build
 
 > mvn verify
 
-#RUN
+# RUN
 
 > mvn verify
 > 
